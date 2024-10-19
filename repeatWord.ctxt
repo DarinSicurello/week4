@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=repeatWord
+comment1.params=word\ n
+comment1.target=java.lang.String\ repeatWord(java.lang.String,\ int)
+numComments=2
