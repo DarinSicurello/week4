@@ -180,7 +180,8 @@ public class Week4{
         // the average of the elements in the first array is 
         // greater than the average of the elements in the second array.
         
-        public static double calculateAverage2(double[]nums2) {
+        
+        public static  double calculateAverage2(double[]nums2) {
         double sum2 = 0.0; // Initialize sum to 0
 
         // Calculate the sum of the array elements
@@ -203,11 +204,30 @@ public class Week4{
         System.out.println(willBuyDrink(moneyInPocket, false)); // Output: false
         System.out.println(willBuyDrink(moneyInPocket, true)); // Output: false
         
+        
         public static boolean willBuyDrink(boolean HotOutside, double moneyInPocket) {
         return moneyInPocket > 10.50 && HotOutside; // Return true if conditions are met
     }
         
         //Q13 My on Method to create 
+        
+       public static void main(String[] args) {
+        printFortuneCookie();
+    }
+
+    public static void printFortuneCookie() {
+        String[] fcookie = {
+                "You learn Java code.",
+                "Leaning Coding is in the write dirrection.",
+                "Greeting Profeesor Falken!.",
+                "Whould you like to play a game of Chess.",
+                "Believe you can, and you're halfway there."
+        };
+
+        int randomIndex = (int) (Math.random() * fcookie.length);
+        String fcookie = fcookie[randomIndex];
+
+        System.out.println("The fortune cookie says: " + fcookie);
     }
 }
    
