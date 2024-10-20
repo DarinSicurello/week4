@@ -211,12 +211,12 @@ public class Week4{
         
         //Q13 My on Method to create 
         
-       public static void main(String[] args) {
+          public static void main(String[] args) {
         printFortuneCookie();
     }
 
     public static void printFortuneCookie() {
-        String[] fcookie = {
+        String[] FortuneCookie= {
                 "You learn Java code.",
                 "Leaning Coding is in the write dirrection.",
                 "Greeting Profeesor Falken!.",
@@ -224,10 +224,10 @@ public class Week4{
                 "Believe you can, and you're halfway there."
         };
 
-        int randomIndex = (int) (Math.random() * fcookie.length);
-        String fcookie = fcookie[randomIndex];
+        int randomIndex[] = (int) (Math.random() * Cookie.length);
+        String FortuneCookie = FortuneCookie[randomIndex];
 
-        System.out.println("The fortune cookie says: " + fcookie);
+        System.out.println("The fortune cookie says: " + printFortuneCookie());
     }
 }
    
