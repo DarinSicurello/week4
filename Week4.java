@@ -116,53 +116,123 @@ public class Week4{
         //Q7. Write a method that takes a String, word, and an int, n, as arguments and 
         //returns the word concatenated to itself 3  times.
         
-        //String word = "Hello";
-        //int n = 3;
+        String word = "Hello";
+        int n = 3;
         
-        //String result3 = repeatWord(word, n);
-        //System.out.println(result3);
+       
+        System.out.println(repeatWord(word, n));
         
-        //String repeatWord(String word, int n) {
-        //StringBuilder result = new StringBuilder();
-    
-        // Loop to append "Hello" n times
-        //for (int i = 0; i < n; i++) {
-        //    result3.append(repeatWord);
-        //}
-
-        //return result3.toString();
-        
+       
         
         //Q8 Prints   firstName and lastName with a space
         
         
         String firstName = "John";
         String lastName = "Smith";
-        String fullName = firstName + " " + lastName;
-        System.out.println(fullName);
+       
+        System.out.println(fullName(firstName,lastName));
         
         
         //Q9 method that takes an array of int and returns true 
         // if the sum of all the ints in the array is greater than 100.
         
-        //int[] numbers1 = {20, 27, 10, 23};
-        //int[] numbers2 = {23, 27, 30, 50};
+        int[] numbers1 = {20, 27, 10, 23};
+        int[] numbers2 = {23, 27, 30, 50};
         
-        //System.out.println(numbers1);
-        //System.out.println(numbers2);
+        System.out.println(greaterThan100(numbers1));
+        System.out.println(greaterThan100(numbers2));
         
-        //int sum2 = 0;
-        
-        //for (int num : numbers2) {
-            //sum += num;
-        //}
-            
-        //return sum > 100;
-    }
         // 10 Write a method that takes an array of double and 
         // returns the average of all the elements in the array.
         
-        public static double calculateAverage(double[] nums) {
+        double[] num = {2.3, 2.9, 31.6, 24.2};
+        System.out.println(calculateAverage(num));
+        
+        
+        // Q11 Write a method that takes two arrays of double and returns true if
+        // the average of the elements in the first array is 
+        // greater than the average of the elements in the second array.
+        
+        double[] num1 = {25.5, 2.7, 31.8, 21.2};
+        double[] num2 = {2.1, 1.9, 21.6, 44.7};
+        
+        
+        // Q12 12. Write a method called willBuyDrink that takes a boolean isHotOutside,
+        //and a double moneyInPocket, and returns true if it is hot outside and 
+        //if moneyInPocket is greater than 10.50.
+
+
+        
+        double moneyInPocket = 10.50;
+        
+        System.out.println(willBuyDrink(true,moneyInPocket));  // Output: true
+        System.out.println(willBuyDrink(false,moneyInPocket));  // Output: false
+        
+       
+        
+        //
+        
+    
+        System.out.println("The fortune cookie says: " + printFortuneCookie());
+         
+        
+        
+  
+} // END OF MAIN 
+//Q13 My on Method to create
+    public static String printFortuneCookie() {
+        String[] FortuneCookie= {
+                "You learn Java code.",
+                "Leaning Coding is in the write dirrection.",
+                "Greeting Profeesor Falken!.",
+                "Whould you like to play a game of Chess.",
+                "Believe you can, and you're halfway there."
+            };
+
+        int randomIndex = (int) (Math.random() * FortuneCookie.length);
+        return FortuneCookie[randomIndex];
+
+        
+    }
+   // Question 12 extra method
+   public static boolean willBuyDrink(boolean HotOutside, double moneyInPocket) {
+        return moneyInPocket > 10.50 && HotOutside; // Return true if conditions are met   
+        
+        
+    }
+    // Questions 7 extra method
+    
+     public static String repeatWord(String word, int n) {
+        StringBuilder result3 = new StringBuilder();
+    
+        // Loop to append "Hello" n times
+        for (int i = 0; i < n; i++) {
+            result3.append(word);
+        }
+
+        return result3.toString();
+    }
+    
+    // Questions 8 Extra method 
+    
+     public static String fullName(String firstName, String lastName){
+
+            return firstName + " " + lastName;}
+    
+    // Question 9 Extra Method
+    
+    public static boolean greaterThan100 (int[] numbers){
+        int sum2 = 0;
+        
+        for (int num : numbers) {
+            sum2 += num;
+        }
+            
+        return sum2 > 100;
+    }
+    //Question 10 Extra method
+    
+    public static double calculateAverage(double[] nums) {
         double sum = 0.0; // Initialize sum to 0
 
         // Calculate the sum of the array elements
@@ -170,64 +240,18 @@ public class Week4{
             sum += num; // Add each num to sum
         }
         
-        double[] num = {2.3, 2.9, 31.6, 24.2};
-        
-        double calculateAverage = sum / num.length;  // Divided sum by the number of elements
+    
+        return sum / nums.length;  // Divided sum by the number of elements
                                        
-        return calculateAverage; 
         
-        // Q11 Write a method that takes two arrays of double and returns true if
-        // the average of the elements in the first array is 
-        // greater than the average of the elements in the second array.
-        
-        
-        public static  double calculateAverage2(double[]nums2) {
-        double sum2 = 0.0; // Initialize sum to 0
-
-        // Calculate the sum of the array elements
-        for (double num : nums2) {
-            sum2 += num; // Add each num to sum
-        }
-        
-        double[] num1 = {25.5, 2.7, 31.8, 21.2};
-        double[] num2 = {2.1, 1.9, 21.6, 44.7};
-        
-        double calculateAverage2 = sum / num1.length + num2.length;  // Divided sum by the number of elements
-        return calculateAverage2; 
-        
-        // Q12
-        
-        int moneyInPocket = 10;
-        
-        System.out.println(willBuyDrink(HotOutside, true));  // Output: true
-        System.out.println(willBuyDrink(HotOutside, false));  // Output: false
-        System.out.println(willBuyDrink(moneyInPocket, false)); // Output: false
-        System.out.println(willBuyDrink(moneyInPocket, true)); // Output: false
-        
-        
-        public static boolean willBuyDrink(boolean HotOutside, double moneyInPocket) {
-        return moneyInPocket > 10.50 && HotOutside; // Return true if conditions are met
+    
     }
-        
-        //Q13 My on Method to create 
-        
-          public static void main(String[] args) {
-        printFortuneCookie();
+  // Question 11 Extra Method 
+  
+  public static  boolean calculateAverage2(double[]nums1,double[]nums2) {
+
+    
+        return calculateAverage(nums1)>calculateAverage(nums2);
     }
-
-    public static void printFortuneCookie() {
-        String[] FortuneCookie= {
-                "You learn Java code.",
-                "Leaning Coding is in the write dirrection.",
-                "Greeting Profeesor Falken!.",
-                "Whould you like to play a game of Chess.",
-                "Believe you can, and you're halfway there."
-        };
-
-        int randomIndex[] = (int) (Math.random() * Cookie.length);
-        String FortuneCookie = FortuneCookie[randomIndex];
-
-        System.out.println("The fortune cookie says: " + printFortuneCookie());
-    }
+    
 }
-   
